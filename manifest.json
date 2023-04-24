@@ -1,6 +1,6 @@
 {
-  "name": "Welcome to ITST 304 - Mobile Computing",
-  "short_name": "LSPU CCS",
+  "name": "Rumble Words Game",
+  "short_name": "Rumble Words",
   "icons": [{
     "src": "images/logo-ccs-60.png",
       "sizes": "60x60",

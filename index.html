@@ -1,60 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Philippine History Quiz</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<style>
-  .quiz-container {
-	max-width: 500px;
-	margin: 0 auto;
-	text-align: center;
-}
-.quiz-header {
-	background-color: #007bff;
-	color: #fff;
-	padding: 20px;
-}
-.quiz-question {
-	margin-top: 50px;
-	font-size: 24px;
-}
-label {
-	display: block;
-	margin: 10px 0;
-}
-#submit-btn {
-	margin-top: 20px;
-	padding: 10px 20px;
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-#result {
-	margin-top: 20px;
-	font-size: 24px;
-}
+  <head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+  <title>Rumble Words Game</title>
+  <link rel="manifest" href="manifest.json">
+  <script src="sw.js"></script>
 
-</style>
-<body>
-	<div class="quiz-container">
-		<div class="quiz-header">
-			<h1>Philippine History Quiz</h1>
-		</div>
-		<div class="quiz-question">
-			<p>What year did the Philippine Revolution begin?</p>
-			<form id="quiz-form">
-				<label><input type="radio" name="answer" value="a">1896</label>
-				<label><input type="radio" name="answer" value="b">1898</label>
-				<label><input type="radio" name="answer" value="c">1901</label>
-				<label><input type="radio" name="answer" value="d">1905</label>
-			</form>
-		</div>
-		<button id="submit-btn">Submit</button>
-		<div id="result"></div>
-	</div>
-	<script src="js/main.js"></script>
-</body>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Rumble Words Game</h1>
+      <p>Unscramble the words to win!</p>
+      <div id="word"></div>
+      <div id="input">
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button id="submit">Submit</button>
+      </div>
+      <div id="result"></div>
+      <button id="new-word">New Word</button>
+    </div>
+    <script src="js/main.js"></script>
+ </body>
+
 </html>
