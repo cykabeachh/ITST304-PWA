@@ -1,8 +1,19 @@
-window.onload = () => {
-  'use strict';
+const quizForm = document.querySelector('#quiz-form');
+const submitButton = document.querySelector('#submit-btn');
+const resultDiv = document.querySelector('#result');
 
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./sw.js');
-  }
-}
+const correctAnswer = 'a';
+
+submitButton.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	const selectedAnswer = quizForm.elements.answer.value;
+
+	if (selectedAnswer === correctAnswer) {
+		resultDiv.innerHTML = 'Correct!';
+		resultDiv.style.color = 'green';
+	} else {
+		resultDiv.innerHTML = 'Incorrect. The correct answer is 1896.';
+		resultDiv.style.color = 'red';
+	}
+});

@@ -1,27 +1,60 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>ITST 304</title>
-  <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/logo-ccs-60.png" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="images/logo-ccs-60.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="white"/>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="ITST 304">
-  <meta name="msapplication-TileImage" content="images/logo-ccs-90.png">
-  <meta name="msapplication-TileColor" content="#FFFFFF">
+	<title>Philippine History Quiz</title>
+	<link rel="stylesheet" href="style.css">
 </head>
-<body class="fullscreen">
-  <div class="container">
-    <h1 class="title">ITST 304</h1>
-    <p>I love PWA Programming! =)</p>
-    <canvas id="canvas" style="height: 400px;width:300;border: 1px solid;"></canvas>
-    <script src="snake.js"></script>
-  </div>
-  <script src="js/main.js"></script>
+<style>
+  .quiz-container {
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+.quiz-header {
+	background-color: #007bff;
+	color: #fff;
+	padding: 20px;
+}
+.quiz-question {
+	margin-top: 50px;
+	font-size: 24px;
+}
+label {
+	display: block;
+	margin: 10px 0;
+}
+#submit-btn {
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#result {
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+</style>
+<body>
+	<div class="quiz-container">
+		<div class="quiz-header">
+			<h1>Philippine History Quiz</h1>
+		</div>
+		<div class="quiz-question">
+			<p>What year did the Philippine Revolution begin?</p>
+			<form id="quiz-form">
+				<label><input type="radio" name="answer" value="a">1896</label>
+				<label><input type="radio" name="answer" value="b">1898</label>
+				<label><input type="radio" name="answer" value="c">1901</label>
+				<label><input type="radio" name="answer" value="d">1905</label>
+			</form>
+		</div>
+		<button id="submit-btn">Submit</button>
+		<div id="result"></div>
+	</div>
+	<script src="js/main.js"></script>
 </body>
 </html>
